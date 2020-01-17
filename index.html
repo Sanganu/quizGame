@@ -12,45 +12,45 @@
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
         crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
     <!-- <link rel=" stylesheet " rel="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/cyborg/bootstrap.min.css " type="text/css " /> -->
     <link rel="stylesheet " href="./assets/style.css " type="text/css " />
 </head>
+
 <body>
     <header>
         <h3>Fun quiz app using timers</h3>
     </header>
-  <br />
-    <div class="start ">
-        <button id="startQuiz" class="btn btn-success btn-lg" type="button" >Start Quiz</button>
+    <br />
+    <div class="start container">
+        <button id="startQuiz" class="btn btn-success btn-lg" type="button">Start Quiz</button>
     </div>
-    <div class ="container" id="quizContainer">
-            <aside class="col-lg-3">
+    <div class="container" id="quizContainer">
+        <div class="row">
+            <div class="col-md-3">
+                <aside class="col-lg-3">
                     <p id="numberofquestions"></p>
                     <p id="timer"></p>
                     <p id="score"></p>
-            </aside>
-                  <section id="quizSection" class="col-lg-9">
-                    <!-- <div id="displayQuestion">
-                        
-                    </div>
-                   
-                       <button  name ="option" id ="choice1" value=""></li>
-                       <button name="option" id="choice2" value=""></li>
-                   -->
-                  </section>
-                  <div class="row">
+                </aside>
+            </div>
+            <div class="col-ms-9">
+                <section id="quizSection" class="col-lg-9">
+                </section>
 
-                 </div>
-    
+            </div>
+        </div>
+
     </div>
     <div id="box">
-        
+
     </div>
     <!-- <footer>
         &copy; Sangeetha Kaliaperumal
     </footer> -->
     <script src="./assets/quiz.js"></script>
-    <script src ="./assets/script.js" defer></script>
+    <script src="./assets/script.js" defer></script>
 </body>
-</html> 
+
+</html>

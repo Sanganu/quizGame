@@ -6,10 +6,11 @@ let question_div = document.querySelector("#displayQuestion");
 let option1_button = document.getElementById("choice1");
 let option2_button = document.getElementById("choice2");
 let timer_p = document.getElementById("timer");
-let timerID = setTimeout(mytimer,1000);
+let timerID = setTimeout(mytimer,100);
 let timevalue = 150;
 let container = document.getElementById("quizSection") ;
 let ptag = document.createElement("p");
+timer_p.style.display = "none";
 
 // Variables
 var timer =50;
@@ -22,13 +23,8 @@ start_button.addEventListener("click",startGame);
 
  
 function displayQuestion(){
-  // let question_h1 = document.createElement("h1");
-  // console.log(question_div)
-  // question_h1.textContent = questions[i].question;
-  // question_div.appendChild(question_h1);
-  // option1_button.textContent = questions[i].options[0];
-  // option1_button.setAttribute("data-answer",questions[i].answer)
   container.textContent = ""
+  timer_p.style.display = "block";
   ptag.textContent = questions[i].question;
   let button1 = document.createElement("button");
   button1.setAttribute("value",questions[i].options[0]);
@@ -92,5 +88,7 @@ function checkoptionselected(event){
 }
 
 function displayResults(){
-   container.textContent = `Results wins - ${wins} : Loss - ${loss}`
+  
+   container.innerHTML = `<h5>Results</h5><p> wins - ${wins} : Loss - ${loss}</p><p>Time Left:${timevalue}`;
+   clearTimeout(timerID);
 }
