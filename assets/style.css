@@ -1,0 +1,33 @@
+#quizcontainer {
+    height:50vh;
+    border: 5px solid black;
+    border-radius: 15px;
+}
+footer{
+    bottom:0;
+    height: 10vh;
+    width: 100vw;
+    position:fixed;
+    background-color: goldenrod;
+    right:0;
+}
+
+header{
+    top:0;
+    position:fixed;
+    width: 100vw;
+    /* height: 10vh; */
+    background-color: goldenrod;
+    padding-bottom:10px;
+    margin-bottom:20px;
+}
+
+.start{
+  width: 100vw;
+  margin-top:30px;
+  padding-top:20px;
+}
+
+button{
+    background: -o-repeating-linear-gradient(red,goldenrod)
+}
