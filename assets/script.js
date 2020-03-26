@@ -6,8 +6,8 @@ let question_div = document.querySelector("#displayQuestion");
 let option1_button = document.getElementById("choice1");
 let option2_button = document.getElementById("choice2");
 let timer_p = document.getElementById("timer");
-let timerID = setTimeout(mytimer,100);
-let timevalue = 150;
+let timerID = 0;
+let timevalue = 500;
 let container = document.getElementById("quizSection") ;
 let ptag = document.createElement("p");
 timer_p.style.display = "none";
@@ -25,6 +25,7 @@ start_button.addEventListener("click",startGame);
 function displayQuestion(){
   container.textContent = ""
   timer_p.style.display = "block";
+
   ptag.textContent = questions[i].question;
   let button1 = document.createElement("button");
   button1.setAttribute("value",questions[i].options[0]);
@@ -47,7 +48,8 @@ function startGame(){
    console.log("Game")
    i =0;
    timevalue = 150;
-   let interval = setInterval(mytimer,50);
+   timerID = setTimeout(mytimer,100);
+
    displayQuestion();
 }
 
@@ -88,7 +90,7 @@ function checkoptionselected(event){
 }
 
 function displayResults(){
-  
+   
    container.innerHTML = `<h5>Results</h5><p> wins - ${wins} : Loss - ${loss}</p><p>Time Left:${timevalue}`;
    clearTimeout(timerID);
 }
