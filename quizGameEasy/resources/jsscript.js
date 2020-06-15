@@ -1,11 +1,12 @@
 // Using Plain JS Script
 // DOM element pointers
 const questcont = document.getElementById("question");
-const resultcont = document.querySelector("#results");
+const gameContainer = document.querySelector("#gameContainer");
 const startbut  = document.getElementById("start-game");
+
 //Hide Blocks
-resultcont.style.display = "none";
-questcont.style.display = "none";
+gameContainer.style.display = "none";
+
 
 //Global Variables
 let currentQuiz = 0;
