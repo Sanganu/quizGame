@@ -1,496 +1,496 @@
 var questions = [
     {
-        question:"7+6",
+        question:"7-6",
         choices:["","","",""],
         answer:0
     },
     {
-        question:"4+6",
+        question:"10-6",
         choices:["","","",""],
         answer:0
     },
     {
-        question:"9+6",
+        question:"9-6",
         choices:["","","",""],
         answer:0
     },
     {
-        question:"10+8",
+        question:"10-8",
         choices:["","","",""],
         answer:0
     },
     {
-        question:"8+4",
+        question:"8-4",
         choices:["","","",""],
         answer:0
     },
     {
-        question:"10+9",
+        question:"10-9",
         choices:["","","",""],
         answer:0
     },
     {
-        question:"6+6",
+        question:"6-6",
         choices:["","","",""],
         answer:0
     },
     {
-        question:"2+9",
+        question:"11-9",
         choices:["","","",""],
         answer:0
     },
     {
-        question:"2+3",
-        choices:["","","",""],
-        answer:0
-    }, 
-    {
-        question:"5+1",
-        choices:["","","",""],
-        answer:0
-    },
-    {
-        question:"9+9",
-        choices:["","","",""],
-        answer:0
-    },
-    {
-        question:"4+4",
-        choices:["","","",""],
-        answer:0
-    },
-    {
-        question:"7+9",
-        choices:["","","",""],
-        answer:0
-    },
-    {
-        question:"5+7",
-        choices:["","","",""],
-        answer:0
-    },
-    {
-        question:"5+5",
-        choices:["","","",""],
-        answer:0
-    },
-    {
-        question:"3+6",
-        choices:["","","",""],
-        answer:0
-    },
-    {
-        question:"10+7",
-        choices:["","","",""],
-        answer:0
-    },
-    {
-        question:"4+3",
-        choices:["","","",""],
-        answer:0
-    },
-    {
-        question:"8+9",
+        question:"5-3",
         choices:["","","",""],
         answer:0
     }, 
     {
-        question:"10+6",
+        question:"5-1",
         choices:["","","",""],
         answer:0
     },
     {
-        question:"9+8",
+        question:"9-9",
         choices:["","","",""],
         answer:0
     },
     {
-        question:"5+6",
+        question:"4-4",
         choices:["","","",""],
         answer:0
     },
     {
-        question:"9+10",
+        question:"16-9",
         choices:["","","",""],
         answer:0
     },
     {
-        question:"6+4",
+        question:"12-7",
         choices:["","","",""],
         answer:0
     },
     {
-        question:"2+6",
+        question:"5-5",
         choices:["","","",""],
         answer:0
     },
     {
-        question:"1+9",
+        question:"9-6",
         choices:["","","",""],
         answer:0
     },
     {
-        question:"3+8",
+        question:"10-7",
         choices:["","","",""],
         answer:0
     },
     {
-        question:"6+9",
+        question:"7-3",
         choices:["","","",""],
         answer:0
     },
     {
-        question:"6+5",
-        choices:["","","",""],
-        answer:0
-    }, 
-    {
-        question:"2+5",
-        choices:["","","",""],
-        answer:0
-    },
-    {
-        question:"9+4",
-        choices:["","","",""],
-        answer:0
-    },
-    {
-        question:"4+8",
-        choices:["","","",""],
-        answer:0
-    },
-    {
-        question:"8+6",
-        choices:["","","",""],
-        answer:0
-    },
-    {
-        question:"4+1",
-        choices:["","","",""],
-        answer:0
-    },
-    {
-        question:"7+7",
-        choices:["","","",""],
-        answer:0
-    },
-    {
-        question:"2+10",
-        choices:["","","",""],
-        answer:0
-    },
-    {
-        question:"8+5",
-        choices:["","","",""],
-        answer:0
-    },
-    {
-        question:"6+8",
-        choices:["","","",""],
-        answer:0
-    },
-    {
-        question:"2+4",
+        question:"17-9",
         choices:["","","",""],
         answer:0
     }, 
     {
-        question:"4+10",
+        question:"10-6",
         choices:["","","",""],
         answer:0
     },
     {
-        question:"9+1",
+        question:"9-8",
         choices:["","","",""],
         answer:0
     },
     {
-        question:"10+10",
+        question:"11-6",
         choices:["","","",""],
         answer:0
     },
     {
-        question:"7+10",
+        question:"19-10",
         choices:["","","",""],
         answer:0
     },
     {
-        question:"5+8",
+        question:"6-4",
         choices:["","","",""],
         answer:0
     },
     {
-        question:"8+10",
+        question:"8-6",
         choices:["","","",""],
         answer:0
     },
     {
-        question:"3+9",
+        question:"10-9",
         choices:["","","",""],
         answer:0
     },
     {
-        question:"3+1",
+        question:"11-8",
         choices:["","","",""],
         answer:0
     },
     {
-        question:"3+7",
-        choices:["","","",""],
+        question:"15-9",
+        choices:["","6","",""],
         answer:0
     },
     {
-        question:"3+10",
+        question:"6-5",
         choices:["","","",""],
         answer:0
     }, 
     {
-        question:"6+7",
+        question:"7-5",
+        choices:["","2","",""],
+        answer:0
+    },
+    {
+        question:"9-4",
         choices:["","","",""],
         answer:0
     },
     {
-        question:"3+5",
+        question:"12-8",
+        choices:["","","","4"],
+        answer:0
+    },
+    {
+        question:"8-6",
         choices:["","","",""],
         answer:0
     },
     {
-        question:"1+6",
+        question:"4-1",
         choices:["","","",""],
         answer:0
     },
     {
-        question:"1+10",
+        question:"7-7",
         choices:["","","",""],
         answer:0
     },
     {
-        question:"2+7",
+        question:"12-10",
+        choices:["2","","",""],
+        answer:0
+    },
+    {
+        question:"8-5",
+        choices:["","","",""],
+        answer:0
+    },
+    {
+        question:"14-8",
+        choices:["","","6",""],
+        answer:0
+    },
+    {
+        question:"6-4",
+        choices:["","","2",""],
+        answer:0
+    }, 
+    {
+        question:"14-10",
+        choices:["","","4",""],
+        answer:0
+    },
+    {
+        question:"9-1",
+        choices:["","","",""],
+        answer:0
+    },
+    {
+        question:"10-10",
+        choices:["","","",""],
+        answer:0
+    },
+    {
+        question:"17-10",
+        choices:["","","","7"],
+        answer:0
+    },
+    {
+        question:"13-8",
+        choices:["","5","",""],
+        answer:0
+    },
+    {
+        question:"18-10",
+        choices:["","","",""],
+        answer:0
+    },
+    {
+        question:"12-9",
+        choices:["","","",""],
+        answer:0
+    },
+    {
+        question:"3-1",
+        choices:["","","",""],
+        answer:0
+    },
+    {
+        question:"10-7",
+        choices:["","","",""],
+        answer:0
+    },
+    {
+        question:"13-10",
         choices:["","","",""],
         answer:0
     }, 
     {
-        question:"1+5",
+        question:"13-7",
+        choices:["","","6",""],
+        answer:0
+    },
+    {
+        question:"8-5",
         choices:["","","",""],
         answer:0
     },
     {
-        question:"9+7",
+        question:"7-6",
+        choices:["","","1",""],
+        answer:0
+    },
+    {
+        question:"11-10",
         choices:["","","",""],
         answer:0
     },
     {
-        question:"2+1",
-        choices:["","","",""],
-        answer:0
-    },
-    {
-        question:"4+2",
-        choices:["","","",""],
-        answer:0
-    },
-    {
-        question:"1+7",
-        choices:["","","",""],
-        answer:0
-    },
-    {
-        question:"1+8",
-        choices:["","","",""],
-        answer:0
-    },
-    {
-        question:"9+5",
-        choices:["","","",""],
-        answer:0
-    },
-    {
-        question:"6+3",
-        choices:["","","",""],
-        answer:0
-    },
-    {
-        question:"2+8",
-        choices:["","","",""],
-        answer:0
-    },
-    {
-        question:"7+5",
+        question:"9-7",
         choices:["","","",""],
         answer:0
     }, 
     {
-        question:"2+2",
+        question:"6-5",
         choices:["","","",""],
         answer:0
     },
     {
-        question:"5+9",
+        question:"9-7",
         choices:["","","",""],
         answer:0
     },
     {
-        question:"9+2",
+        question:"2-1",
         choices:["","","",""],
         answer:0
     },
     {
-        question:"7+2",
+        question:"4-2",
         choices:["","","",""],
         answer:0
     },
     {
-        question:"7+3",
+        question:"8-7",
+        choices:["","","",""],
+        answer:0
+    },
+    {
+        question:"9-8",
+        choices:["","","",""],
+        answer:0
+    },
+    {
+        question:"9-5",
+        choices:["","","",""],
+        answer:0
+    },
+    {
+        question:"6-3",
+        choices:["","","",""],
+        answer:0
+    },
+    {
+        question:"10-8",
+        choices:["","","",""],
+        answer:0
+    },
+    {
+        question:"7-5",
         choices:["","","",""],
         answer:0
     }, 
     {
-        question:"4+7",
+        question:"2-2",
         choices:["","","",""],
         answer:0
     },
     {
-        question:"8+2",
+        question:"14-9",
         choices:["","","",""],
         answer:0
     },
     {
-        question:"8+1",
+        question:"9-2",
         choices:["","","",""],
         answer:0
     },
     {
-        question:"6+1",
+        question:"7-2",
         choices:["","","",""],
         answer:0
     },
     {
-        question:"10+1",
-        choices:["","","",""],
-        answer:0
-    },
-    {
-        question:"1+1",
-        choices:["","","",""],
-        answer:0
-    },
-    {
-        question:"5+3",
-        choices:["","","",""],
-        answer:0
-    },
-    {
-        question:"5+4",
+        question:"7-3",
         choices:["","","",""],
         answer:0
     }, 
     {
-        question:"8+7",
+        question:"11-7",
         choices:["","","",""],
         answer:0
     },
     {
-        question:"10+3",
+        question:"8-2",
         choices:["","","",""],
         answer:0
     },
     {
-        question:"5+2",
+        question:"8-1",
         choices:["","","",""],
         answer:0
     },
     {
-        question:"6+2",
+        question:"6-1",
         choices:["","","",""],
         answer:0
     },
     {
-        question:"1+2",
+        question:"10-1",
         choices:["","","",""],
         answer:0
     },
     {
-        question:"10+5",
+        question:"1-1",
         choices:["","","",""],
         answer:0
     },
     {
-        question:"3+2",
+        question:"5-3",
         choices:["","","",""],
         answer:0
     },
     {
-        question:"3+3",
-        choices:["","","",""],
-        answer:0
-    },
-    {
-        question:"1+3",
-        choices:["","","",""],
-        answer:0
-    },
-    {
-        question:"10+2",
-        choices:["","","",""],
-        answer:0
-    },
-    {
-        question:"7+1",
-        choices:["","","",""],
-        answer:0
-    },
-    {
-        question:"3+4",
+        question:"5-4",
         choices:["","","",""],
         answer:0
     }, 
     {
-        question:"10+4",
+        question:"8-7",
         choices:["","","",""],
         answer:0
     },
     {
-        question:"4+9",
+        question:"10-3",
         choices:["","","",""],
         answer:0
     },
     {
-        question:"5+10",
+        question:"5-2",
         choices:["","","",""],
         answer:0
     },
     {
-        question:"8+3",
+        question:"6-2",
         choices:["","","",""],
         answer:0
     },
     {
-        question:"7+4",
+        question:"1-2",
         choices:["","","",""],
         answer:0
     },
     {
-        question:"9+3",
+        question:"10-5",
         choices:["","","",""],
         answer:0
     },
     {
-        question:"8+8",
+        question:"3-2",
         choices:["","","",""],
         answer:0
     },
     {
-        question:"1+4",
+        question:"3-3",
         choices:["","","",""],
         answer:0
     },
     {
-        question:"6+10",
+        question:"4-3",
+        choices:["","","",""],
+        answer:0
+    },
+    {
+        question:"10-2",
+        choices:["","","",""],
+        answer:0
+    },
+    {
+        question:"7-1",
+        choices:["","","",""],
+        answer:0
+    },
+    {
+        question:"7-4",
         choices:["","","",""],
         answer:0
     }, 
     {
-        question:"7+8",
+        question:"10-4",
+        choices:["","","",""],
+        answer:0
+    },
+    {
+        question:"13-9",
+        choices:["","","",""],
+        answer:0
+    },
+    {
+        question:"15-10",
+        choices:["","","",""],
+        answer:0
+    },
+    {
+        question:"8-3",
+        choices:["","","",""],
+        answer:0
+    },
+    {
+        question:"7-4",
+        choices:["","","",""],
+        answer:0
+    },
+    {
+        question:"9-3",
+        choices:["","","",""],
+        answer:0
+    },
+    {
+        question:"8-8",
+        choices:["","","",""],
+        answer:0
+    },
+    {
+        question:"5-4",
+        choices:["","","",""],
+        answer:0
+    },
+    {
+        question:"16-10",
+        choices:["","","",""],
+        answer:0
+    }, 
+    {
+        question:"15-8",
         choices:["","","",""],
         answer:0
     }
