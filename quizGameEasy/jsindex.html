@@ -34,6 +34,16 @@
                     </ul>
                   
                 </div>
+                <div class="card">
+                    <h4>Welcome <span id="user"></span></h4>
+                    <form class="form-inline">
+                        <div class="fomr-group">
+                            <label>Enter User Initials</label>
+                            <input id="userentry" type="text" />
+                        </div>
+                        <button id="saveuser">Save User Initials</button>
+                    </form>
+                </div>
                 <button class="btn btn-warning btn-block" id="start-game">Start Quiz</button>
 
             <div class="row">
@@ -50,22 +60,20 @@
                         <h6 id="timer" class="card-body"></h6>
                     </div>>
 
-            </div>
-
-            <div id="gameContainer">
-                <h4 id="question"></h4>
-                <button id="option-1" class="options rounded-circle btn btn-warning" option-value="0"></button>
-                <button id="option-2" class="options rounded-circle btn btn-warning" option-value="1"></button>
-                <button id="option-3" class="options rounded-circle btn btn-warning" option-value=2></button>
-                <button id="option-4" class="options rounded-circle btn btn-warning" option-value=3></button>
-            </div>
-            </content>
-            <aside class="col-md-4">
+                   <div id="gameContainer">
+                        <h4 id="question"></h4>
+                        <button id="option-1" class="options rounded-circle btn btn-warning" option-value="0"></button>
+                        <button id="option-2" class="options rounded-circle btn btn-warning" option-value="1"></button>
+                        <button id="option-3" class="options rounded-circle btn btn-warning" option-value=2></button>
+                        <button id="option-4" class="options rounded-circle btn btn-warning" option-value=3></button>
+                    </div>
+                </content>
+                <aside class="col-md-4">
                 <section id="wronglist" class="bg-warning border border-primary">
                     <h6>Answered Wrong</h6>
 
                 </section>
-            </aside>
+                 </aside>
         </div>
         </div>
     </main>

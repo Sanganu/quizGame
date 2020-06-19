@@ -41,7 +41,7 @@ var questions = [
     },
     {
         question:"6 / 3",
-        choices:["4","12","6","1"],
+        choices:["4","2","6","1"],
         answer:1
     }, 
     {
@@ -111,8 +111,8 @@ var questions = [
     },
     {
         question:"90 / 10",
-        choices:["5","95","100","9"],
-        answer:3
+        choices:["5","95","10","9"],
+        answer:2
     },
     {
         question:"24 / 4",
@@ -256,7 +256,7 @@ var questions = [
     },
     {
         question:"8 / 2", 
-        choices:["1","2","6","8"],
+        choices:["1","4","6","8"],
         answer:1
     },
     {

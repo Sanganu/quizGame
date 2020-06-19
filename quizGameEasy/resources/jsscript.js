@@ -17,6 +17,13 @@ gameContainer.style.display = "none";
 rightList.style.display="none";
 wrongList.style.display="none";
 
+// Variables in Global scope
+let rightCount = 0;
+let wrongCount = 0;
+let countTimer = 0;
+let timerId ;
+
+
 
 for(let i=0;i<alloptions.length;i++){
     alloptions[i].onclick = validateUserResponse
@@ -30,11 +37,15 @@ startbut.addEventListener("click",function(){
     gameContainer.style.display = "block";
     startbut.style.display="none";
     rightList.style.display="block";
-wrongList.style.display="block";
+    wrongList.style.display="block";
+    timerId = setInterval(displayTimer,1000);
     displayQuestion()
 });
 
-
+function displayTimer(){
+   countTimer++;
+   timer.textContent = countTimer;
+}
 function displayQuestion(){
     questcont.textContent = questions[currentQuiz].question;
     option1.textContent = questions[currentQuiz].choices[0];
@@ -51,19 +62,27 @@ function validateUserResponse(){
         let textElement = document.createElement("p")
         textElement.textContent = questions[currentQuiz].question
         textElement.classList.add("text-center")
-        rightList.appendChild(textElement)
+        rightList.appendChild(textElement);
+        rightCount++;
     }
     else{
         let textElement = document.createElement("p")
         textElement.textContent = questions[currentQuiz].question
         textElement.classList.add("text-center")
-        wrongList.appendChild(textElement)
+        wrongList.appendChild(textElement);
+        wrongCount++;
     }
     if(currentQuiz<questions.length-1){
         currentQuiz++;
         displayQuestion();
     }
     else{
-        console.log("End")
+        console.log("End");
+        endQuiz();
     }
+}
+
+
+function endQuiz(){
+    gameContainer.style.display = "none";
 }
