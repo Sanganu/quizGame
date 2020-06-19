@@ -13,38 +13,57 @@
 
 <body>
     <header>
-        <h1>Quiz Game</h1>
-        <nav class="bg-info text-info">
-            <a href="./score.html">Score List</a>
-
+        <nav class="bg-secondary text-white">
+            <h4>Math Facts Speed Practice</h4>
+            <aside>
+                <a href="./score.html">Score List</a>
+            </aside>
         </nav>
     </header>
-
+    <br />
     <main>
         <div class="container">
-            <aside class="col">
-                <button id="start-game">Start Quiz</button>
-                <p>Timer:<span id="timer"></span></p>
-            </aside>
-            <div class="row">
-            <section class="col-md-8">
-              
-                <div id="gameContainer"> 
-                    <h4 id="question"></h4> 
-                    <button id="option-1" class="options" option-value="0"></button>
-                    <button id="option-2" class="options" option-value="1"></button>
-                    <button id="option-3" class="options" option-value=2></button>
-                    <button id="option-4" class="options" option-value=3></button>
+       
+                <h5>Division Facts</h5>
+                <br/>
+                <div class="card">
+                    <ul>
+                        <li>Math speed Practice </li>
+                        <li>This is timed</li>
+                        <li>   Click start button</li>
+                    </ul>
+                  
                 </div>
-            </section>
-            <aside class="col-md-4">
-                <section id="rightlist" class="bg-success">
-                    <h4>Answered Right</h4>
+                <button class="btn btn-warning btn-block" id="start-game">Start Quiz</button>
 
-                </section>
-                <section id="wronglist" class="bg-warning">
-                    <h4>Answered Wrong</h4>
-    
+            <div class="row">
+                <aside class="col-md-4">
+                    <section id="rightlist" class="bg-success border border-primary">
+                        <h6>Answered Right</h6>
+
+                    </section>
+                </aside>
+                <content class="col-md-6">
+                    <div class="card">
+                        <h6 class="card-header">Timer
+                        </h6>
+                        <h6 id="timer" class="card-body"></h6>
+                    </div>>
+
+            </div>
+
+            <div id="gameContainer">
+                <h4 id="question"></h4>
+                <button id="option-1" class="options rounded-circle btn btn-warning" option-value="0"></button>
+                <button id="option-2" class="options rounded-circle btn btn-warning" option-value="1"></button>
+                <button id="option-3" class="options rounded-circle btn btn-warning" option-value=2></button>
+                <button id="option-4" class="options rounded-circle btn btn-warning" option-value=3></button>
+            </div>
+            </content>
+            <aside class="col-md-4">
+                <section id="wronglist" class="bg-warning border border-primary">
+                    <h6>Answered Wrong</h6>
+
                 </section>
             </aside>
         </div>
@@ -59,4 +78,5 @@
     <script src="./resources/division_questions.js"></script>
     <script src="./resources/jsscript.js"></script>
 </body>
+
 </html>

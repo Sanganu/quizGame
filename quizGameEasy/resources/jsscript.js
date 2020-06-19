@@ -8,11 +8,16 @@ const option2 = document.getElementById("option-2");
 const option3 = document.getElementById("option-3");
 const option4 = document.getElementById("option-4");
 const alloptions = document.getElementsByClassName("options");
-let rightList = document.getElementById("rightlist");
-let wrongList = document.getElementById("wronglist");
+const rightList = document.getElementById("rightlist");
+const wrongList = document.getElementById("wronglist");
+const timer = document.getElementById("timer");
 
 //Hide Blocks
 gameContainer.style.display = "none";
+rightList.style.display="none";
+wrongList.style.display="none";
+
+
 for(let i=0;i<alloptions.length;i++){
     alloptions[i].onclick = validateUserResponse
 }
@@ -24,6 +29,8 @@ let currentQuiz = 0;
 startbut.addEventListener("click",function(){
     gameContainer.style.display = "block";
     startbut.style.display="none";
+    rightList.style.display="block";
+wrongList.style.display="block";
     displayQuestion()
 });
 
