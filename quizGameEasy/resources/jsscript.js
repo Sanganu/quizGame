@@ -7,7 +7,7 @@ const startbut  = document.getElementById("start-game");
 //Hide Blocks
 gameContainer.style.display = "none";
 
-
+// console.log(questions)
 //Global Variables
 let currentQuiz = 0;
 
