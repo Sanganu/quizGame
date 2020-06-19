@@ -14,7 +14,7 @@
 <body>
     <header>
         <h1>Quiz Game</h1>
-        <nav>
+        <nav class="bg-info text-info">
             <a href="./score.html">Score List</a>
 
         </nav>
@@ -22,11 +22,12 @@
 
     <main>
         <div class="container">
-            <aside class="col 4">
+            <aside class="col">
                 <button id="start-game">Start Quiz</button>
                 <p>Timer:<span id="timer"></span></p>
             </aside>
-            <section class="col 8">
+            <div class="row">
+            <section class="col-md-8">
               
                 <div id="gameContainer"> 
                     <h4 id="question"></h4> 
@@ -36,6 +37,17 @@
                     <button id="option-4" class="options" option-value=3></button>
                 </div>
             </section>
+            <aside class="col-md-4">
+                <section id="rightlist" class="bg-success">
+                    <h4>Answered Right</h4>
+
+                </section>
+                <section id="wronglist" class="bg-warning">
+                    <h4>Answered Wrong</h4>
+    
+                </section>
+            </aside>
+        </div>
         </div>
     </main>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
