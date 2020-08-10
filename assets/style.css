@@ -31,3 +31,8 @@ header{
 button{
     background: -o-repeating-linear-gradient(red,goldenrod)
 }
+
+.container{
+    padding-top: 5%;
+    margin-top:5%;
+}

@@ -21,7 +21,7 @@ var questions = [
     },
     {
         question:"32 / 4",
-        choices:["6","8","9","6"],
+        choices:["6","8","9","5"],
         answer:1
     },
     {

@@ -31,10 +31,11 @@
                         <li>Math speed Practice </li>
                         <li>This is timed</li>
                         <li>   Click start button</li>
+                        <button class="btn btn-warning btn-block" id="start-game">Start Quiz</button>
                     </ul>
                   
                 </div>
-                <div class="card">
+                <div class="card" id="results">
                     <h4>Welcome <span id="user"></span></h4>
                     <form class="form-inline">
                         <div class="fomr-group">
@@ -44,16 +45,16 @@
                         <button id="saveuser">Save User Initials</button>
                     </form>
                 </div>
-                <button class="btn btn-warning btn-block" id="start-game">Start Quiz</button>
+             
 
             <div class="row">
-                <aside class="col-md-4">
+                <div class="col-md-4">
                     <section id="rightlist" class="bg-success border border-primary">
                         <h6>Answered Right</h6>
 
                     </section>
-                </aside>
-                <content class="col-md-6">
+                </div>
+                <div class="col-md-4">
                     <div class="card">
                         <h6 class="card-header">Timer
                         </h6>
@@ -67,14 +68,14 @@
                         <button id="option-3" class="options rounded-circle btn btn-warning" option-value=2></button>
                         <button id="option-4" class="options rounded-circle btn btn-warning" option-value=3></button>
                     </div>
-                </content>
-                <aside class="col-md-4">
+                </div>
+                <div class="col-md-4">
                 <section id="wronglist" class="bg-warning border border-primary">
                     <h6>Answered Wrong</h6>
 
                 </section>
-                 </aside>
-        </div>
+                 </div>
+            </div>
         </div>
     </main>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
