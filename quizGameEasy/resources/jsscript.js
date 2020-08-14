@@ -11,11 +11,13 @@ const alloptions = document.getElementsByClassName("options");
 const rightList = document.getElementById("rightlist");
 const wrongList = document.getElementById("wronglist");
 const timer = document.getElementById("timer");
+const user = document.getElementById("results")
 
 //Hide Blocks
 gameContainer.style.display = "none";
 rightList.style.display="none";
 wrongList.style.display="none";
+results.style.display="none";
 
 // Variables in Global scope
 let rightCount = 0;
