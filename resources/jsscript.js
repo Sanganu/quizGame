@@ -2,7 +2,8 @@
 // DOM element pointers
 const questcont = document.getElementById("question");
 const gameContainer = document.querySelector("#gameContainer");
-const startbut  = document.getElementById("start-game");
+const startBtn = document.getElementById("start-game");
+const endBtn = document.getElementById("end-game");
 const option1 = document.getElementById("option-1");
 const option2 = document.getElementById("option-2");
 const option3 = document.getElementById("option-3");
@@ -13,11 +14,14 @@ const wrongList = document.getElementById("wronglist");
 const timer = document.getElementById("timer");
 const user = document.getElementById("results")
 
+//Add Event Listiner
+endBtn.addEventListener("click",endQuiz)
 //Hide Blocks
 gameContainer.style.display = "none";
 rightList.style.display="none";
 wrongList.style.display="none";
 results.style.display="none";
+endBtn.style.display = "none";
 
 // Variables in Global scope
 let rightCount = 0;
@@ -35,9 +39,12 @@ for(let i=0;i<alloptions.length;i++){
 let currentQuiz = 0;
 
 //OnClick Event Listeners
-startbut.addEventListener("click",function(){
+startBtn.addEventListener("click",function(){
+    gameBtn = document.getElementById("end-game");
     gameContainer.style.display = "block";
-    startbut.style.display="none";
+    startBtn.style.display="none";
+    endBtn.style.display="block";
+    rightLisBtn = document.getElementById("end-game");
     rightList.style.display="block";
     wrongList.style.display="block";
     timerId = setInterval(displayTimer,1000);
