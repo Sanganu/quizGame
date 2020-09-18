@@ -1,9 +1,11 @@
-#id{
-    border-radius: 50%;
+#timerdiv{
+    border-radius: 15px,50px,25px;
     border: 1px solid black;
+    background-color: rgb(18, 143, 143);
+    height:10vh;
 }
-.answer{
+.answer{    
     margin: 1%;
-    border: 1px solid black;
-    border-radius:25%;
+    box-shadow: 0 4px 8px 0 rgba(65, 60, 60, 0.2), 0 6px 20px 0 rgba(114, 73, 73, 0.19);
+    border-radius:5px;
 }

@@ -26,7 +26,11 @@
                        <button class="btn btn-warning btn-block" id="start-game">Start Quiz</button>
                        <button class="btn btn-danger btn-block" id="end-game">End Quiz</button>
                    </div>
-                    <h6 id="timer"></h6>
+                   <div id="timerdiv" class="m-3 p-3 text-center">
+                       <h4>Timer</h4>
+                        <h5 id="timer" class="mb-3"></h5>
+                   </div>
+                   
               
                 
                 <div id="gameContainer">
@@ -42,12 +46,12 @@
              <div class="col-md-6">
                  <div class="row">
                      <div class="col-md-12">
-                            <section class="card bg-info">
+                            <section class="card bg-info d-flex flex-wrap m-3 p-3">
                                     <h6 class="card-header">Answered Right</h6>
                                     <div  id="rightlist" class="card-body"></div>
                 
                              </section>
-                                <section class="card bg-secondary">
+                                <section class="card bg-info d-flex flex-wrap m-3 p-3 ">
                                         <h6 class="card-header">Answered Wrong</h6>
                                         <div id="wronglist" class="card-body"></div>
                                 </section>
