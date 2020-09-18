@@ -8,90 +8,77 @@
     <title>Quiz Game</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
         crossorigin="anonymous">
-    <link rel="stylesheet" href="./resources/style.css">
-    <link rel="stylesheet " href="./assets/style.css " type="text/css" />
+    <link rel="stylesheet " href="./style.css " type="text/css" />
 </head>
 
 <body>
-    <header class="text-center">
-        <h3 class="m-4 p-4">Math facts - Timed Quiz Game</h3>
-      </header>
-    
-    <br />
-    <main class="container">
-
-
-
-            <h5 class="card-title">Division Facts</h5>
-            <br/>
-            <div class="card col-6">
-                <ul>
-                    <li>Math speed Practice </li>
-                    <li>This is timed</li>
-                    <li> Click start button</li>
-
-                </ul>
-            </div>
-            <div class="card col-6">
-                <h6 class="card-header">Timer
-                </h6>
-                <h6 id="timer" class="card-body"></h6>
-            </div>
-            <button class="btn btn-warning btn-block" id="start-game">Start Quiz</button>
-            <button class="btn btn-danger btn-block" id="end-game">End Quiz</button>
+    <header class="bg-danger">
+        <nav class="d-flex flex-row-reverse">
+                <h3>Division Facts - get set go...</h3>
+        </nav>
       
-        <div class="card" id="results">
-            <h4>Welcome
-                <span id="user"></span>
-            </h4>
-            <form class="form-inline">
+    </header>
+    
+    <main class="container mt-5 pt-5">
+         <section class="row">
+             <div class="col-md-6">
+                    <div class="d-flex flex-row">
+                       <button class="btn btn-warning btn-block" id="start-game">Start Quiz</button>
+                       <button class="btn btn-danger btn-block" id="end-game">End Quiz</button>
+                   </div>
+                    <h6 id="timer"></h6>
+              
+                
+                <div id="gameContainer">
+                        <h4 id="question"></h4>
+                        <button id="option-1" class="options btn btn-warning" option-value="0"></button>
+                        <button id="option-2" class="options  btn btn-warning" option-value="1"></button>
+                        <button id="option-3" class="options  btn btn-warning" option-value=2></button>
+                        <button id="option-4" class="options  btn btn-warning" option-value=3></button>
+                </div>
+          
+
+             </div>
+             <div class="col-md-6">
+                 <div class="row">
+                     <div class="col-md-12">
+                            <section class="card bg-info">
+                                    <h6 class="card-header">Answered Right</h6>
+                                    <div  id="rightlist" class="card-body"></div>
+                
+                             </section>
+                                <section class="card bg-secondary">
+                                        <h6 class="card-header">Answered Wrong</h6>
+                                        <div id="wronglist" class="card-body"></div>
+                                </section>
+                     </div>
+                     <div class="col-md-12">
+
+                     </div>
+                 </div>
+             </div>
+         </section>
+
+        <!-- <form class="form-inline">
                 <div class="fomr-group">
                     <label>Enter User Initials</label>
                     <input id="userentry" type="text" />
                 </div>
                 <button id="saveuser">Save User Initials</button>
-            </form>
-        </div>
-
-
-        <div class="row">
-            <div class="col-md-4">
-                <section id="rightlist" class="bg-success border border-primary">
-                    <h6>Answered Right</h6>
-
-                </section>
-            </div>
-            <div class="col-md-4">
-
-
-                <div id="gameContainer">
-                    <h4 id="question"></h4>
-                    <button id="option-1" class="options rounded-circle btn btn-warning" option-value="0"></button>
-                    <button id="option-2" class="options rounded-circle btn btn-warning" option-value="1"></button>
-                    <button id="option-3" class="options rounded-circle btn btn-warning" option-value=2></button>
-                    <button id="option-4" class="options rounded-circle btn btn-warning" option-value=3></button>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <section id="wronglist" class="bg-warning border border-primary">
-                    <h6>Answered Wrong</h6>
-
-                </section>
-            </div>
-        </div>
+            </form> -->
         
     </main>
-    <footer>
+    <footer class="bg-danger fixed-bottom">
             &copy; Sangeetha Kaliaperumal
-          </footer>
+    </footer>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
         crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
-    <script src="./resources/division_questions.js"></script>
-    <script src="./resources/jsscript.js"></script>
+    <script src="./division_questions.js"></script>
+    <script src="./jsscript.js"></script>
 </body>
 
 </html>

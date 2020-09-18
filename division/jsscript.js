@@ -12,7 +12,7 @@ const alloptions = document.getElementsByClassName("options");
 const rightList = document.getElementById("rightlist");
 const wrongList = document.getElementById("wronglist");
 const timer = document.getElementById("timer");
-const user = document.getElementById("results")
+
 
 //Add Event Listiner
 endBtn.addEventListener("click",endQuiz)
@@ -20,7 +20,6 @@ endBtn.addEventListener("click",endQuiz)
 gameContainer.style.display = "none";
 rightList.style.display="none";
 wrongList.style.display="none";
-results.style.display="none";
 endBtn.style.display = "none";
 
 // Variables in Global scope
@@ -67,17 +66,18 @@ function displayQuestion(){
 function validateUserResponse(){
     console.log("This",this.getAttribute("option-value"))
     var userAnswer = parseInt(this.getAttribute("option-value"))
+
     if( userAnswer === questions[currentQuiz].answer ){
-        let textElement = document.createElement("p")
+        let textElement = document.createElement("span")
         textElement.textContent = questions[currentQuiz].question
-        textElement.classList.add("text-center")
+        textElement.classList.add("answer");
         rightList.appendChild(textElement);
         rightCount++;
     }
     else{
-        let textElement = document.createElement("p")
+        let textElement = document.createElement("span")
         textElement.textContent = questions[currentQuiz].question
-        textElement.classList.add("text-center")
+        textElement.classList.add("answer")
         wrongList.appendChild(textElement);
         wrongCount++;
     }
@@ -94,4 +94,5 @@ function validateUserResponse(){
 
 function endQuiz(){
     gameContainer.style.display = "none";
+    clearInterval(timerId)
 }
