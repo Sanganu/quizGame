@@ -27,17 +27,16 @@ let rightCount = 0;
 let wrongCount = 0;
 let countTimer = 0;
 let timerId ;
-
-
-
-for(let i=0;i<alloptions.length;i++){
-    alloptions[i].onclick = validateUserResponse
-}
-// console.log(questions)
-//Global Variables
 let currentQuiz = 0;
 
+
 //OnClick Event Listeners
+option1.addEventListener("click",validateUserResponse)
+option2.addEventListener("click",validateUserResponse)
+option3.addEventListener("click",validateUserResponse)
+option4.addEventListener("click",validateUserResponse)
+
+
 startBtn.addEventListener("click",function(){
     gameBtn = document.getElementById("end-game");
     gameContainer.style.display = "block";
@@ -63,9 +62,10 @@ function displayQuestion(){
 }
 
 
-function validateUserResponse(){
-    console.log("This",this.getAttribute("option-value"))
-    var userAnswer = parseInt(this.getAttribute("option-value"))
+function validateUserResponse(event){
+    event.preventDefault()
+    console.log("This",this.getAttribute("data-option-value"))
+    var userAnswer = parseInt(this.getAttribute("data-option-value"))
 
     if( userAnswer === questions[currentQuiz].answer ){
         let textElement = document.createElement("span")
@@ -94,5 +94,15 @@ function validateUserResponse(){
 
 function endQuiz(){
     gameContainer.style.display = "none";
+    console.log(`Result Right:${rightCount} Wrong:${wrongCount} Time:${countTimer} Missed: ${questions.length - currentQuiz}`)
+    let division = {
+        right: rightCount,
+        wrong: wrongCount,
+        time: countTimer,
+        missed: questions.length - currentQuiz
+    }
+    let divisionLS = JSON.parse(localStorage.getItem("divisionlist")) || []
+    divisionLS.push(division)
+    localStorage.setItem("divisionlist",JSON.stringify(divisionLS))
     clearInterval(timerId)
 }

@@ -1,0 +1,17 @@
+.hide{
+    display:none;
+}
+
+button{
+    border-radius: 10px;
+    border: 10px solid rgb(149, 45, 45);
+    margin: 5%;
+    padding:5%;
+    font-size: 5rem;
+}
+
+#quiz-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

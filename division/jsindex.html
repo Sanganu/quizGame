@@ -13,9 +13,11 @@
 
 <body>
     <header class="bg-danger">
-        <nav class="d-flex flex-row-reverse">
-                <h3>Division Facts - get set go...</h3>
+        <nav>
+               <h1><a href="../index.html">Math Facts</a></h1>
+                <!-- <a href="#">Stats</a> -->
         </nav>
+        <h6 class="m-2 p-2 d-flex flex-row-reverse">Division Facts - get set go...</h6>
       
     </header>
     
@@ -28,18 +30,18 @@
                    </div>
                    <div id="timerdiv" class="m-3 p-3 text-center">
                        <h4>Timer</h4>
-                        <h5 id="timer" class="mb-3"></h5>
+                        <h5 id="timer" ></h5>
                    </div>
                    
               
                 
-                <div id="gameContainer">
+                <form id="gameContainer">
                         <h4 id="question"></h4>
-                        <button id="option-1" class="options btn btn-warning" option-value="0"></button>
-                        <button id="option-2" class="options  btn btn-warning" option-value="1"></button>
-                        <button id="option-3" class="options  btn btn-warning" option-value=2></button>
-                        <button id="option-4" class="options  btn btn-warning" option-value=3></button>
-                </div>
+                        <button id="option-1" class="options btn btn-warning" data-option-value="0"></button>
+                        <button id="option-2" class="options  btn btn-warning" data-option-value="1"></button>
+                        <button id="option-3" class="options  btn btn-warning" data-option-value="2"></button>
+                        <button id="option-4" class="options  btn btn-warning" data-option-value="3"></button>
+                </form>
           
 
              </div>
@@ -63,17 +65,11 @@
              </div>
          </section>
 
-        <!-- <form class="form-inline">
-                <div class="fomr-group">
-                    <label>Enter User Initials</label>
-                    <input id="userentry" type="text" />
-                </div>
-                <button id="saveuser">Save User Initials</button>
-            </form> -->
-        
+     
+
     </main>
     <footer class="bg-danger fixed-bottom">
-            &copy; Sangeetha Kaliaperumal
+            &copy; Sangeetha.K
     </footer>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
