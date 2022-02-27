@@ -32,8 +32,8 @@ let questionIndex = 0;
 let timer = 10 * questions.length;
 let timerObject;
 let score=0;
-
-
+const spanSEl = document.createElement("span")
+scoreEl.appendChild(spanSEl)
 scoreEl.classList.add("hide");
 timerEl.classList.add("hide")
 
@@ -61,19 +61,21 @@ quizContEl.addEventListener("click",function(event){
       console.log("button",event.target.textContent)
       if(event.target.textContent=== questions[questionIndex].answer){
           score+=5;
+          spanSEl.textContent = score
       }else{
-
+         timer-=10;
       }
       if(questionIndex < questions.length-1){
           questionIndex++;
           getQuestion();
       }else{
-   
+         summary()
       }
   }
 })
 
 function summary(){
+    clearInterval(timerObject);
 
 }
 
@@ -83,13 +85,14 @@ function startTimerScore(){
     timerEl.textContent = "Timer :  ";
     const spanEl = document.createElement("span")
     timerEl.appendChild(spanEl)
+    scoreEl.textContent = "Score : "
     timerObject = setInterval(()=>{
         
         spanEl.textContent = timer;
         if(timer > 1){
             timer--;
         }else{
-
+            summary()
         }
     },1000)
 }

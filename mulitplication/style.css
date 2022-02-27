@@ -1,3 +1,10 @@
+header{
+    top:0;
+    position: fixed;
+    width:100%;
+    margin-bottom:2%;
+    padding-bottom:2%;
+}
 .hide{
     display:none;
 }
@@ -33,7 +40,8 @@ footer{
 .question{
     align-self: flex-start;
     text-align: center;
-    min-width:100%
+    min-width:100%;
+    font-size: 2rem;
 }
 #timer-score{
     display: flex;
