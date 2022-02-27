@@ -5,13 +5,37 @@
 button{
     border-radius: 10px;
     border: 10px solid rgb(149, 45, 45);
-    margin: 5%;
+    margin: 2%;
     padding:5%;
-    font-size: 5rem;
+    font-size: 2rem;
 }
 
 #quiz-container{
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap:wrap;
+}
+
+footer{
+    position: fixed;
+    bottom:0;
+    background-color: brown;
+    text-align: center;
+    width:100%;
+}
+
+.display-result{
+    border-radius: 25px;
+    border: 5px solid brown;
+    width: 20%;
+}
+.question{
+    align-self: flex-start;
+    text-align: center;
+    min-width:100%
+}
+#timer-score{
+    display: flex;
+    justify-content: space-between;
 }
