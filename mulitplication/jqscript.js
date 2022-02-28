@@ -1,7 +1,8 @@
 const quizContEl = document.getElementById("quiz-container");
 const startBtnEl = document.getElementById("start-quiz");
 const timerEl = document.getElementById("timer")
-const scoreEl = document.getElementById("score")
+const scoreEl = document.getElementById("score");
+const endEl = document.getElementById("end-quiz")
 const h4El = document.createElement("h4");
 const h5El = document.createElement("h5");
 const button1El = document.createElement("button");
@@ -9,7 +10,7 @@ const button2El = document.createElement("button");
 const button3El = document.createElement("button");
 const button4El = document.createElement("button");
 const spanSEl = document.createElement("span")
-
+const formEl = document.getElementById("save-user")
 let questionIndex = 0;
 let timer = 3 * questions.length;
 let timerObject;
@@ -31,6 +32,7 @@ function renderHTMLElements() {
     h4El.classList.add("question")
     scoreEl.classList.remove("hide");
     timerEl.classList.remove("hide")
+    endEl.classList.remove("hide")
     //Timers and Scores
 
 }
@@ -39,7 +41,8 @@ function renderHTMLElements() {
 
 
 scoreEl.classList.add("hide");
-timerEl.classList.add("hide")
+timerEl.classList.add("hide");
+endEl.classList.add("hide")
 
 
 startBtnEl.addEventListener("click", function () {
@@ -81,7 +84,7 @@ quizContEl.addEventListener("click", function (event) {
 
 function summary() {
     clearInterval(timerObject);
-
+    quizContEl.classList.add("hide")
 }
 
 function startTimerScore() {
