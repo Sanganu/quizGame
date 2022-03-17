@@ -17,12 +17,7 @@ let timerObject;
 let score = 0;
 
 function renderHTMLElements() {
-    //     const h3El = document.createElement("h3");
-    //     quizContEl.appendChild(h3El);
-    //     for (let i = 1; i <= 4; i++) {
-    //         const btn1El = document.createElement("button");
-    //         quizContEl.appendChild(btn1El);
-    //     }
+   
     // Quiz Container
     quizContEl.appendChild(h4El)
     quizContEl.appendChild(button1El);
@@ -33,6 +28,8 @@ function renderHTMLElements() {
     scoreEl.classList.remove("hide");
     timerEl.classList.remove("hide")
     endEl.classList.remove("hide")
+    
+endEl.addEventListener("click",summary)
     //Timers and Scores
 
 }

@@ -13,7 +13,7 @@ button{
     border-radius: 10px;
     border: 10px solid rgb(149, 45, 45);
     margin: 2%;
-    padding:5%;
+    padding:2%;
     font-size: 2rem;
 }
 
@@ -36,6 +36,12 @@ footer{
     border-radius: 25px;
     border: 5px solid brown;
     width: 20%;
+   
+}
+h6{
+    height:15vh;
+    padding:1%;
+    
 }
 .question{
     align-self: flex-start;
