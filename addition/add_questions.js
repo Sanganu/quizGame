@@ -121,7 +121,7 @@ var questions = [
     },
     {
         question:"2+6",
-        choices:["","8","",""],
+        choices:["12","8","7","10"],
         answer:1
     },
     {
@@ -141,102 +141,102 @@ var questions = [
     },
     {
         question:"6+5",
-        choices:["","","","11"],
+        choices:["9","10","12","11"],
         answer:0
     }, 
     {
         question:"2+5",
-        choices:["","7","",""],
+        choices:["6","7","9","10"],
         answer:1
     },
     {
         question:"9+4",
-        choices:["13","","",""],
+        choices:["13","12","11","14"],
         answer:0
     },
     {
         question:"4+8",
-        choices:["","12","",""],
+        choices:["18","12","14","11"],
         answer:1
     },
     {
         question:"8+6",
-        choices:["","","14",""],
+        choices:["12","13","14","7"],
         answer:2
     },
     {
         question:"4+1",
-        choices:["","","","5"],
+        choices:["4","6","7","5"],
         answer:3
     },
     {
         question:"7+7",
-        choices:["","","14",""],
+        choices:["17","21","14","13"],
         answer:2
     },
     {
         question:"2+10",
-        choices:["","","","12"],
+        choices:["21","20","11","12"],
         answer:3
     },
     {
         question:"8+5",
-        choices:["","","","13"],
+        choices:["17","11","18","13"],
         answer:3
     },
     {
         question:"6+8",
-        choices:["","14","",""],
+        choices:["17","14","18","16"],
         answer:1
     },
     {
         question:"2+4",
-        choices:["","6","",""],
+        choices:["2","6","4","10"],
         answer:1
     }, 
     {
         question:"4+10",
-        choices:["","","","14"],
+        choices:["40","8","13","14"],
         answer:3
     },
     {
         question:"9+1",
-        choices:["","","","10"],
+        choices:["14","11","90","10"],
         answer:3
     },
     {
         question:"10+10",
-        choices:["","10","",""],
-        answer:1
+        choices:["11","10","20","21"],
+        answer:2
     },
     {
         question:"7+10",
-        choices:["","","17",""],
+        choices:["13","14","17","21"],
         answer:2
     },
     {
         question:"5+8",
-        choices:["13","","",""],
+        choices:["13","15","18","19"],
         answer:0
     },
     {
         question:"8+10",
-        choices:["","","18",""],
+        choices:["17","14","18","19"],
         answer:2
     },
     {
         question:"3+9",
-        choices:["","","","12"],
+        choices:["3","9","11","12"],
         answer:3
     },
     {
         question:"3+1",
-        choices:["","4","",""],
+        choices:["3","4","1","5"],
         answer:1
     },
     {
         question:"3+7",
-        choices:["","","","10"],
+        choices:["4","6","7","10"],
         answer:3
     },
     {
@@ -296,32 +296,32 @@ var questions = [
     },
     {
         question:"1+8",
-        choices:["","9","",""],
+        choices:["8","9","11","7"],
         answer:1
     },
     {
         question:"9+5",
-        choices:["14","","",""],
+        choices:["14","13","16","12"],
         answer:0
     },
     {
         question:"6+3",
-        choices:["","","","9"],
+        choices:["7","5","8","9"],
         answer:3
     },
     {
         question:"2+8",
-        choices:["","","10",""],
+        choices:["2","18","10","8"],
         answer:2
     },
     {
         question:"7+5",
-        choices:["","12","",""],
+        choices:["7","12","11",""],
         answer:1
     }, 
     {
         question:"2+2",
-        choices:["","","","4"],
+        choices:["2","3","6","4"],
         answer:3
     },
     {
@@ -456,12 +456,12 @@ var questions = [
     },
     {
         question:"5+10",
-        choices:["15","","",""],
+        choices:["15","20","19","14"],
         answer:0
     },
     {
         question:"8+3",
-        choices:["","","11",""],
+        choices:["12","14","11","16"],
         answer:2
     },
     {
