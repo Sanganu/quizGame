@@ -1,0 +1,32 @@
+label{
+    font-size: 20px;
+    text-align:center;
+    letter-spacing: 2px;
+    /* position: absolute;
+    top:-10; */
+    min-width: 90%;
+  
+}
+
+input{
+    min-width: 90%;
+    padding-left: 2%;
+    margin-left:1%;
+}
+.inputCont{
+    border: 2px dotted purple;
+    position: relative;
+    min-width: 30%;
+    display:block;
+    padding: 1%;
+    margin:1%;
+  
+}
+
+.correct{
+    background:linear-gradient(180deg,green,grey,white)
+}
+
+.wrong {
+    background:linear-gradient(180deg,red,grey,white);
+}

@@ -1,65 +1,65 @@
 console.log("Subtraction", questions)
+$("#submitAnswers").hide()
 
-
-
-
-    var renderQuestions = () => {
-    
-     
-
+const renderQuestions = () => {
        for(let i=0;i<questions.length;i++){
-        let inputDescription =$('<input>',{
-            class:'subtractionQs',
-            name:'name-'+i,
-            "type":"number",
-            "min":0,
-            "max":120,
-            "placeholder":questions[i].question,
-            "data-value":questions[i].answer,
-            "focusin": function(){
-                $(this).val("")
-            }
-        }   )
-        $("#subtractQuiz").append(inputDescription)
-        //$(inputDescription).appendTo("#subtractQuiz")
+            let secContainer = $(`<div>`,{
+                class:"inputCont"
+            })
+           
+            let labelDesc = $('<label>',{
+                "text": `Q: ${questions[i].question}`,
+                "for":`name-${i}`,
+               
+            })
+            console.log(labelDesc)
+            // $("#subtractQuiz").append(labelDesc)
+            secContainer.append(labelDesc)
+            let inputDescription =$('<input>',{
+                "class":'subtractionQs',
+                "name":`name-${i}`,
+                "type":"number",
+                "min":0,
+                "max":120,
+                "placeholder":questions[i].question,
+                "data-value":questions[i].answer,
+                "focusin": function(){
+                    $(this).val("")
+                }
+            })
+            // $("#subtractQuiz").append(inputDescription)
+            secContainer.append(inputDescription)
+            console.log(secContainer)
+        $("#subtractQuiz").append(secContainer)
+
        }
-       
-        // for (let i = 0; i < questions.length; i++) {
-        //     // let newlabelEle = labelEle.clone()
-        //     let newinputEle = inputEle.clone()
-        //     // newlabelEle.text(questions[i].question)
-        //     newinputEle.attr("placeholder", questions[i].question)
-        //     newinputEle.attr("name", `question-${i}`)
-        //     newinputEle.attr("data-value", questions[i].answer)
-        //     // newlabelEle.appendTo("#subtractionQuestions")
-        //     newinputEle.appendTo("#subtractionQuestions")
-        //     console.log(i)
-        //     //   $("#subtractQuiz").append(`<input type="number" placeholder="${questions[i].question}" data-value="${questions[i].answer}"/>`)
-        // }
+}
 
-        // for (let i = 0; i < questions.length; i++) {
-        //     let newlabelEle = $("label");
-        //     let newinputEle =  $("input");
-        //     newlabelEle.text(questions[i].question)
-        //     newinputEle.attr("placeholder", questions[i].question)
-        //     newinputEle.attr("name", questions[i].question)
-        //     newinputEle.attr("data-value", questions[i].answer)
-        //     console.log(newinputEle)
-        //    $("#subtractionQuestions").append(newlabelEle)
-        //    $("#subtractionQuestions").append(newinputEle)
-        //     //   $("#subtractQuiz").append(`<input type="number" placeholder="${questions[i].question}" data-value="${questions[i].answer}"/>`)
-        // }
-        //    const buttonEle = $("button")
-        //    buttonEle.text("Submit Answers");
-        //   buttonEle.appendTo("#subtractionQuestions")
+const startTimer =() => {
+    let timerObj = setInterval(()=>{
 
-    }
+    },1000)
+}
 
 $("#start-quiz").on("click", function() {
         renderQuestions()
-        $("#start-quiz").hide()
-    })
+        $("#start-quiz").hide();
+        $("#submitAnswers").show()
+ })
 
-$("#subtractionQuestions button").click(function () {
-    console.log("In CLICK")
+$("#submitAnswers").click(function () {
+    console.log("In CLICK");
+    let score =0;
+    $('input[name^="name-"]').each(function(){
+        //code
+      console.log($(this).attr('name'));
+      let userValue = $(this).val();
+      let correctAns = $(this).attr("data-value");
+      if(userValue == correctAns){
+          $(this).addClass("correct")
+        score++;
+      }else{
+        $(this).addClass("wrong")
+      }
+});
 })
