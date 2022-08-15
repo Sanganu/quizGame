@@ -15,6 +15,7 @@ let questionIndex = 0;
 let timer = 3 * questions.length;
 let timerObject;
 let score = 0;
+let wrong  =0;
 
 function renderHTMLElements() {
    
@@ -68,6 +69,7 @@ quizContEl.addEventListener("click", function (event) {
             spanSEl.innerText = score
         } else {
             timer -= 10;
+            wrong++;
             spanSEl.innerText = score
         }
         if (questionIndex < questions.length - 1) {
@@ -82,6 +84,16 @@ quizContEl.addEventListener("click", function (event) {
 function summary() {
     clearInterval(timerObject);
     quizContEl.classList.add("hide")
+    let multiplicationScore = {
+        right:score,
+        wrong:wrong,
+        time:3 * questions.length - timer,
+        missed: questions.length -(questionIndex+1),
+        date: new Data()
+    }
+    let multiplicationLS = JSON.parse(localstorage.getItem("multiplicationlist")) || []
+    multiplicationLS.push(multiplicationScore)
+    localStorage.setItem("multiplicationlist", JSON.stringify(multiplicationLS))
 }
 
 function startTimerScore() {

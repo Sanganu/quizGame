@@ -21,7 +21,7 @@
 // // Add Event Listeners
 // start_button.addEventListener("click",startGame);
 
- 
+
 // function displayQuestion(){
 //   container.textContent = ""
 //   timer_p.style.display = "block";
@@ -90,7 +90,163 @@
 // }
 
 // function displayResults(){
-   
+
 //    container.innerHTML = `<h5>Results</h5><p> wins - ${wins} : Loss - ${loss}</p><p>Time Left:${timevalue}`;
 //    clearTimeout(timerID);
 // }
+let subtractionLS = JSON.parse(localStorage.getItem("subtractionlist")) || []
+let  subtractionData = []
+if (subtractionLS.length !== 0) {
+   subtractionData = subtractionLS.map(ele => ele.right + ele.time - ele.missed - ele.wrong)
+}
+
+    
+
+
+const ctxs = document.getElementById('subtractionChart').getContext('2d');
+const myCharts = new Chart(ctxs, {
+    type: 'bar',
+    data: {
+        // labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+        datasets: [{
+            label: 'score',
+            data: subtractionData,
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)'
+            ],
+            borderColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        indexAxis:'y',
+        
+    }
+});
+
+let multiplicationLS = JSON.parse(localStorage.getItem("multiplicationlist")) || []
+let multiplicationData = []
+if (multiplicationLS.length !== 0) {
+     multiplicationData = multiplicationLS.map(ele => ele.right + ele.time - ele.missed - ele.wrong)
+} 
+const ctxm = document.getElementById('multiplicationChart').getContext('2d');
+
+const myChartm = new Chart(ctxm, {
+    type: 'bar',
+    data: {
+        // labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+        datasets: [{
+            label: 'score',
+            data: multiplicationData,
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)'
+            ],
+            borderColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        indexAxis:'y',
+    }
+});
+
+let divisionLS = JSON.parse(localStorage.getItem("divisionlist")) || []
+let divisionData = []
+if (divisionLS.length !== 0) {
+     divisionData = divisionLS.map(ele => ele.right + ele.time - ele.missed - ele.wrong)
+    console.log(divisionData)
+} 
+const ctxd = document.getElementById('divisionChart').getContext('2d');
+const myChartd = new Chart(ctxd, {
+    type: 'bar',
+    data: {
+        // labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+        datasets: [{
+            label: 'score',
+            data: divisionData,
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)'
+            ],
+            borderColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        indexAxis:'y',
+    }
+});
+
+
+let additionLS = JSON.parse(localStorage.getItem("additionlist")) || []
+let additionData = []
+if (additionLS.length !== 0) {
+     additionData = divisionLS.map(ele => ele.right + ele.time - ele.missed - ele.wrong)
+
+}
+const ctxa = document.getElementById('additionChart').getContext('2d');
+const myCharta = new Chart(ctxa, {
+    type: 'bar',
+    data: {
+        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+        datasets: [{
+            label: 'score',
+            data: additionData,
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)'
+            ],
+            borderColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        indexAxis:'y',
+    }
+});

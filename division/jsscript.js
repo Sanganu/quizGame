@@ -12,8 +12,8 @@ const alloptions = document.getElementsByClassName("options");
 const rightList = document.getElementById("rightlist");
 const wrongList = document.getElementById("wronglist");
 const timer = document.getElementById("timer");
-
-
+const tableEl = document.querySelector("table")
+const restartEl = document.getElementById("restart")
 //Add Event Listiner
 endBtn.addEventListener("click",endQuiz)
 //Hide Blocks
@@ -21,7 +21,8 @@ gameContainer.style.display = "none";
 rightList.style.display="none";
 wrongList.style.display="none";
 endBtn.style.display = "none";
-
+tableEl.style.display = "none";
+restartEl.style.display="none";
 // Variables in Global scope
 let rightCount = 0;
 let wrongCount = 0;
@@ -53,6 +54,7 @@ function displayTimer(){
    countTimer++;
    timer.textContent = countTimer;
 }
+
 function displayQuestion(){
     questcont.textContent = questions[currentQuiz].question;
     option1.textContent = questions[currentQuiz].choices[0];
@@ -94,15 +96,43 @@ function validateUserResponse(event){
 
 function endQuiz(){
     gameContainer.style.display = "none";
+    endBtn.style.display = "none";
     console.log(`Result Right:${rightCount} Wrong:${wrongCount} Time:${countTimer} Missed: ${questions.length - currentQuiz}`)
     let division = {
         right: rightCount,
         wrong: wrongCount,
         time: countTimer,
-        missed: questions.length - currentQuiz
+        missed: questions.length - currentQuiz,
+        date: new Date()
     }
     let divisionLS = JSON.parse(localStorage.getItem("divisionlist")) || []
     divisionLS.push(division)
     localStorage.setItem("divisionlist",JSON.stringify(divisionLS))
     clearInterval(timerId)
+    tableEl.style.display = "block";
+    const resultEl = document.getElementById("results")
+    for(let i=0;i<divisionLS.length;i++){
+        const trEL = document.createElement("tr")
+        const tdEl1 = document.createElement("td");
+        tdEl1.textContent = divisionLS[i].right;
+        const tdEl2 = document.createElement("td");
+        tdEl2.textContent = divisionLS[i].wrong;
+        const tdEl3 = document.createElement("td");
+        tdEl3.textContent = divisionLS[i].time;
+        const tdEl4 = document.createElement("td");
+        tdEl4.textContent = divisionLS[i].missed;
+        const tdEl5 = document.createElement("td");
+        tdEl5.textContent = divisionLS[i].date;
+        trEL.appendChild(tdEl5);
+        trEL.appendChild(tdEl1);
+        trEL.appendChild(tdEl2);
+        trEL.appendChild(tdEl3);
+        trEL.appendChild(tdEl4);
+        resultEl.appendChild(trEL);
+        restartEl.style.display="block";
+    }
 }
+
+restartEl.addEventListener("click",function(){
+    location.reload()
+})

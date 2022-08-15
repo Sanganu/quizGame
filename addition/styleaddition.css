@@ -6,3 +6,11 @@ textarea{
     width:90%;
     height:40%
 }
+
+.right{
+    border: 1px solid green;
+}
+
+.wrong{
+    border: 1px solid red;
+}

@@ -37,7 +37,7 @@ const renderQuestions = () => {
     }
 }
 const evaluate = () => {
-    clearInterval(timerObj);
+     clearInterval(timerObj);
     // console.log("In CLICK");
     let score = 0;
     let wrong = 0;
@@ -52,7 +52,7 @@ const evaluate = () => {
             $(this).removeClass("wrong")
             $(this).addClass("correct")
             score++;
-            $("h3[name='score']").text(`Score : ${score}`)
+            $("h6[name='score']").text(`Score : ${score}`)
         } else if (!userValue) {
 
             missed++;
@@ -70,7 +70,8 @@ const evaluate = () => {
         right: score,
         wrong: wrong,
         time: 90-timerCount,
-        missed:missed
+        missed:missed,
+        date:new Date()
     }
     let subtractionLS = JSON.parse(localStorage.getItem("subtractionlist")) || []
     subtractionLS.push(subtractionScore)
@@ -81,7 +82,7 @@ const evaluate = () => {
 const startTimer = () => {
 
     timerObj = setInterval(() => {
-        $('h3[name="timer"]').text(`Timer : ${timerCount}`)
+        $('h6[name="timer"]').text(`Timer : ${timerCount}`)
         if (timerCount > 0) {
             timerCount--;
         } else {
