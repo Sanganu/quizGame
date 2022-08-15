@@ -12,7 +12,7 @@
 </head>
 
 <body>
-    <header class="bg-danger">
+    <header class="backdrop">
         <nav>
             <h1>
                 <a href="../index.html">Math Facts</a>
@@ -30,21 +30,21 @@
                     <button class="btn btn-warning btn-block" id="start-game">Start Quiz</button>
                     <button class="btn btn-danger btn-block" id="end-game">End Quiz</button>
                 </section>
-                <section id="timerdiv" class="m-3 p-3 text-center">
+                <section id="timerdiv" class="m-3 p-3 text-center cardback">
                     <h4>Timer</h4>
                     <h5 id="timer"></h5>
                 </section>
 
 
 
-                <form id="gameContainer">
+                <form id="gameContainer" class= "m-4 p-4">
                     <h4 id="question"></h4>
                     <button id="option-1" class="options btn btn-warning" data-option-value="0"></button>
                     <button id="option-2" class="options  btn btn-warning" data-option-value="1"></button>
                     <button id="option-3" class="options  btn btn-warning" data-option-value="2"></button>
                     <button id="option-4" class="options  btn btn-warning" data-option-value="3"></button>
                 </form>
-                <table class="table table-dark">
+                <table class="table backdrop">
                     <thead>
                         <tr>
                             <th scope="col">Date</th>
@@ -61,18 +61,18 @@
             <section class="col-md-6">
                 <section class="row">
                     <section class="col-md-12">
-                        <section class="card bg-info d-flex flex-wrap m-3 p-3">
+                        <section class="card cardback flex-wrap m-3 p-3">
                             <h6 class="card-header">Answered Right</h6>
                             <section id="rightlist" class="card-body"></section>
 
                         </section>
-                        <section class="card bg-info d-flex flex-wrap m-3 p-3 ">
+                        <section class="card cardback d-flex flex-wrap m-3 p-3 ">
                             <h6 class="card-header">Answered Wrong</h6>
                             <section id="wronglist" class="card-body"></section>
                         </section>
                     </section>
                     <section class="col-md-12">
-                        <button class="btn btn-primary" id="restart">Restart</button>
+                        <button class="btn cardback m-3 p-3" id="restart">Restart</button>
                     </section>
                 </section>
             </section>
@@ -81,7 +81,7 @@
 
 
     </main>
-    <footer class="bg-danger fixed-bottom">
+    <footer class="backdrop fixed-bottom">
         &copy; Sangeetha.K
     </footer>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"

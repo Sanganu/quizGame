@@ -1,9 +1,4 @@
-#timerdiv{
-    border-radius: 15px,50px,25px;
-    border: 1px solid black;
-    background-color: rgb(18, 143, 143);
-    
-}
+
 .answer{    
     margin: 1%;
     box-shadow: 0 4px 8px 0 rgba(65, 60, 60, 0.2), 0 6px 20px 0 rgba(114, 73, 73, 0.19);
@@ -13,4 +8,16 @@
 a {
     color: black;
     font-weight: 200;
+}
+
+.backdrop{
+    background-image:linear-gradient(150deg,rgb(101, 40, 50),white,rgb(208, 107, 124));
+}
+
+.cardback{
+    background-image:linear-gradient(150deg,rgb(84, 11, 23),rgb(208, 107, 124));
+    box-shadow: rgb(101, 40, 50);
+    margin:1%;
+    padding:1%;
+    color:white;
 }
