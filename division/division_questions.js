@@ -1,4 +1,4 @@
-var questions = [
+var dquestions = [
     {
         question:"42 / 6",
         choices:["8","9","7","12"],

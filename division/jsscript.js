@@ -1,5 +1,6 @@
 // Using Plain JS Script
 // DOM element pointers
+var questions = dquestions.sort(() => .5 - Math.random())
 const questcont = document.getElementById("question");
 const gameContainer = document.querySelector("#gameContainer");
 const startBtn = document.getElementById("start-game");

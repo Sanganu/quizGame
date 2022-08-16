@@ -12,14 +12,18 @@
 </head>
 
 <body>
-    <header class="backdrop">
-        <nav>
-            <h1>
-                <a href="../index.html">Math Facts</a>
-            </h1>
+    <header class="backdrop m-2 p-2 d-flex justify-content-between">
+        <aside>
+
+            <h1>Division</h1>
+            <h6>Division Facts - get set go...</h6>
+        </aside>
+        <nav class="d-flex align-items-end">
+            <h6>
+                <a href="../index.html">return to Math Facts</a>
+            </h6>
 
         </nav>
-        <h6 class="m-2 p-2 d-flex flex-row-reverse">Division Facts - get set go...</h6>
 
     </header>
 
@@ -27,8 +31,8 @@
         <section class="row">
             <section class="col-md-6">
                 <section class="d-flex flex-row">
-                    <button class="btn btn-warning btn-block" id="start-game">Start Quiz</button>
-                    <button class="btn btn-danger btn-block" id="end-game">End Quiz</button>
+                    <button class="btn btnDark btn-block" id="start-game">Start Quiz</button>
+                    <button class="btn btnDark btn-block" id="end-game">End Quiz</button>
                 </section>
                 <section id="timerdiv" class="m-3 p-3 text-center cardback">
                     <h4>Timer</h4>
@@ -37,12 +41,12 @@
 
 
 
-                <form id="gameContainer" class= "m-4 p-4">
+                <form id="gameContainer" class= "m-4 p-4 text-center">
                     <h4 id="question"></h4>
-                    <button id="option-1" class="options btn btn-warning" data-option-value="0"></button>
-                    <button id="option-2" class="options  btn btn-warning" data-option-value="1"></button>
-                    <button id="option-3" class="options  btn btn-warning" data-option-value="2"></button>
-                    <button id="option-4" class="options  btn btn-warning" data-option-value="3"></button>
+                    <button id="option-1" class="options btn btn-warning m-1 p-1" data-option-value="0"></button>
+                    <button id="option-2" class="options  btn btn-warning m-1 p-1" data-option-value="1"></button>
+                    <button id="option-3" class="options  btn btn-warning m-1 p-1" data-option-value="2"></button>
+                    <button id="option-4" class="options  btn btn-warning m-1 p-1" data-option-value="3"></button>
                 </form>
                 <table class="table backdrop">
                     <thead>
@@ -81,7 +85,7 @@
 
 
     </main>
-    <footer class="backdrop fixed-bottom">
+    <footer class="backdrop fixed-bottom ">
         &copy; Sangeetha.K
     </footer>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"

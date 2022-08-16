@@ -21,3 +21,7 @@ a {
     padding:1%;
     color:white;
 }
+.btnDark{
+    background-image:linear-gradient(150deg,rgb(39, 35, 37),rgb(84, 11, 23),rgba(34, 24, 26, 0.109));
+    color:white;
+}
