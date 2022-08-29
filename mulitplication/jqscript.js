@@ -18,7 +18,6 @@ let score = 0;
 let wrong  =0;
 
 function renderHTMLElements() {
-   
     // Quiz Container
     quizContEl.appendChild(h4El)
     quizContEl.appendChild(button1El);
@@ -29,10 +28,8 @@ function renderHTMLElements() {
     scoreEl.classList.remove("hide");
     timerEl.classList.remove("hide")
     endEl.classList.remove("hide")
-    
-endEl.addEventListener("click",summary)
+    endEl.addEventListener("click",summary)
     //Timers and Scores
-
 }
 
 
@@ -83,15 +80,17 @@ quizContEl.addEventListener("click", function (event) {
 
 function summary() {
     clearInterval(timerObject);
-    quizContEl.classList.add("hide")
+    console.log("End quiz")
+   // quizContEl.classList.add("hide")
+     quizContEl.style.display = "none"
     let multiplicationScore = {
         right:score,
         wrong:wrong,
         time:3 * questions.length - timer,
         missed: questions.length -(questionIndex+1),
-        date: new Data()
+        date: new Date()
     }
-    let multiplicationLS = JSON.parse(localstorage.getItem("multiplicationlist")) || []
+    let multiplicationLS = JSON.parse(localStorage.getItem("multiplicationlist")) || []
     multiplicationLS.push(multiplicationScore)
     localStorage.setItem("multiplicationlist", JSON.stringify(multiplicationLS))
 }

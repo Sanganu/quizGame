@@ -8,9 +8,10 @@ header{
     letter-spacing: 5px;
     margin-bottom: 5px solid black;
     font-size: bolder;
-    background-color: rgb(179, 6, 6);
-    width: 100%;
-    height: 15%;;
+    background: linear-gradient(150deg,rgb(247, 101, 101),#ffffff);
+    width: 100vw;
+    height: 5vh;
+    color: white;
 }
 #quizcontainer {
 
@@ -20,11 +21,11 @@ header{
     justify-content: space-evenly;
 }
 footer{
-    bottom:0;
-    height: 10vh;
+    bottom:-5;
+    height: 5vh;
     width: 100vw;
     position:fixed;
-    background-color: rgb(179, 6, 6);
+    background: linear-gradient(150deg,rgba(135, 6, 6, 0.442), rgb(199, 22, 22),rgb(247, 101, 101),#ffffff);
     right:0;
 }
 .start{
@@ -38,11 +39,16 @@ button{
 }
 
 .container{
-    padding-top: 5%;
-    margin-top:5%;
+    margin-left:12%;
+    padding-top: 2%;
+    margin-top:2%;
 }
 
 a{
     color: black;
     font-weight: 300;
+}
+.card{
+    background: linear-gradient(270deg,pink,white);
+   text-align: center;
 }
