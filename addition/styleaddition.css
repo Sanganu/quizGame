@@ -7,10 +7,38 @@ textarea{
     height:40%
 }
 
-.right{
+.right-answer{
     border: 1px solid green;
 }
 
-.wrong{
+.wrong-answer{
     border: 1px solid red;
+}
+
+ul{
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    max-width: 95%;
+    word-wrap: wrap;
+}
+
+ul li{
+    padding-right: 2%;
+    margin-right: 2%;
+}
+section:nth-child(even) h5{
+    background:linear-gradient(175deg,red,white);
+    text-align: center;
+}
+section:nth-child(odd) h5{
+    background:linear-gradient(175deg,green,white);
+    text-align: center;
+}
+.question-disp{
+    display: inline-block;
+}
+#questionDisplay{
+    margin: 2%;
+    padding:2%;
 }

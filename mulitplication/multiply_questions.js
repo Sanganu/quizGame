@@ -186,7 +186,7 @@ var questions = [
     },
     {
         question:"6 * 8",
-        choices:[43,,,48],
+        choices:[43,87,23,48],
         answer:3
     },
     {
@@ -231,7 +231,7 @@ var questions = [
     },
     {
         question:"3 * 1",
-        choices:[,,,3],
+        choices:[12,9,1,3],
         answer:3
     },
     {
@@ -316,7 +316,7 @@ var questions = [
     },
     {
         question:"7 * 5",
-        choices:[,,,35],
+        choices:[21,19,12,35],
         answer:3
     }, 
     {

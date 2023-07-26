@@ -11,12 +11,14 @@ const button3El = document.createElement("button");
 const button4El = document.createElement("button");
 const spanSEl = document.createElement("span")
 const formEl = document.getElementById("save-user")
+const resultsEl = document.getElementById("results")
+const resultres = document.getElementById("scoreres")
 let questionIndex = 0;
 let timer = 3 * questions.length;
 let timerObject;
 let score = 0;
 let wrong  =0;
-
+let missed = []
 function renderHTMLElements() {
     // Quiz Container
     quizContEl.appendChild(h4El)
@@ -37,8 +39,8 @@ function renderHTMLElements() {
 
 scoreEl.classList.add("hide");
 timerEl.classList.add("hide");
-endEl.classList.add("hide")
-
+endEl.classList.add("hide");
+resultsEl.classList.add("hide");
 
 startBtnEl.addEventListener("click", function () {
     startBtnEl.classList.add("hide")
@@ -67,20 +69,38 @@ quizContEl.addEventListener("click", function (event) {
         } else {
             timer -= 10;
             wrong++;
+            missed.push(questions[questionIndex].answer)
             spanSEl.innerText = score
         }
         if (questionIndex < questions.length - 1) {
             questionIndex++;
             getQuestion();
         } else {
-            summary()
+            endQuiz()
+           // summary()
         }
     }
 })
-
+function endQuiz(){
+    clearInterval(timerObject);
+    console.log("End quiz")
+    resultsEl.classList.remove("hide")
+    quizContEl.classList.add("hide")
+    const h6ele = document.createElement("h6")
+    h6ele.textContent = "Score :"+score+ " Missed:"+( questions.length -(questionIndex+1))
+    const pele = document.createElement("p") 
+    pele.textContent = missed.join(" ")
+    const aele = document.createElement("a")
+    aele.setAttribute("href","./results.html")
+    aele.textContent  = "Summary"
+    resultres.appendChild(h6ele)
+    resultres.appendChild(pele)
+    //  quizContEl.style.display = "none"     
+}
 function summary() {
     clearInterval(timerObject);
     console.log("End quiz")
+    resultsEl.classList.remove("hide")
    // quizContEl.classList.add("hide")
      quizContEl.style.display = "none"
     let multiplicationScore = {
@@ -88,11 +108,32 @@ function summary() {
         wrong:wrong,
         time:3 * questions.length - timer,
         missed: questions.length -(questionIndex+1),
-        date: new Date()
+        date: moment().format('llll')
     }
+    document.getElementById("timer-score").style.display = "none"
     let multiplicationLS = JSON.parse(localStorage.getItem("multiplicationlist")) || []
     multiplicationLS.push(multiplicationScore)
     localStorage.setItem("multiplicationlist", JSON.stringify(multiplicationLS))
+    let summaryEle = document.getElementById("summary")
+    for(let i=0; i <multiplicationLS.length;i++){
+        let trEle = document.createElement("tr")
+        let thEle1 = document.createElement("th")
+        thEle1.textContent = multiplicationLS[i].right
+        let thEle2 = document.createElement("th")
+        thEle2.textContent = multiplicationLS[i].wrong
+        let thEle3 = document.createElement("th")
+        thEle3.textContent = multiplicationLS[i].time
+        let thEle4 = document.createElement("th")
+        thEle4.textContent = multiplicationLS[i].missed
+        let thEle5 = document.createElement("th")
+        thEle5.textContent = multiplicationLS[i].date
+        trEle.appendChild(thEle1)
+        trEle.appendChild(thEle2)
+        trEle.appendChild(thEle3)
+        trEle.appendChild(thEle4)
+        trEle.appendChild(thEle5)
+        summaryEle.append(trEle)
+    }
 }
 
 function startTimerScore() {

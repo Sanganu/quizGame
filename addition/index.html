@@ -18,7 +18,7 @@
             <!-- <a href="#">Stats</a> -->
             <aside>
 
-                <h4 class="m-2 p-2 text-center">Addition Facts - get set go...</h4>
+                <h3 class="m-2 p-2 text-center">Addition Facts - get set go...</h3>
             </aside>
         </nav>
         <h6>
@@ -27,16 +27,33 @@
 
     </header>
     <main class="container m-5 p-5">
-        <button id="start-quiz" class="btn btn-success">Start Addition Facts</button>
-        <article>
+        <article class="row">
 
-            <section name="question-section">
-                <p name="timer"></p>
-                <p name="score"></p>
-            </section>
-            <article name="question-display" class="d-flex text-center">
+            <button id="start-quiz" class="btn btn-success ">Start Addition Facts</button>
+
+        </article>
+        <article class="row">
+
+            <article class="col">
+
+                <article name="question-display" class="text-center  border border-danger border-5">
+                </article>
             </article>
+            <aside class="col">
+                <section class="right-answer"></section>
+                <section class="wrong-answer"></section>
+            </aside>
 
+        </article>
+        <article class="endquiz">
+            <section name="summary-section" class="d-flex justify-content-between">
+                <h6 name="timer"></h6>
+                <h6 name="score"></h6>
+            </section>
+            <button id="end-quiz" class=" btn btn-primary">End Quiz</button>
+            <aside class="result">
+
+            </aside>
         </article>
     </main>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
