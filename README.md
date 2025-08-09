@@ -1,5 +1,6 @@
-# Repo : quizGame
+# Repo: quizGame
 ## Project Title: Quiz Game using timers and local storage
+## [Live](https://sanganu.github.io/quizGame/)
 #### Description: Using JavaScript for DOM manipulation
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
